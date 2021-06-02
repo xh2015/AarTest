@@ -14,6 +14,38 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [ALIYUN_PUSH_APP_KEY   : ALIYUN_PUSH_APP_KEY,
+                                ALIYUN_PUSH_APP_SECRET: ALIYUN_PUSH_APP_SECRET,
+                                MAP_API_KEY           : MAP_API_KEY,
+                                SERVICE_VALUE         : SERVICE_VALUE,
+                                UMENG_CHANNEL_VALUE   : "TEST"
+        ]
+
+        buildConfigField "String", "SERVER_URL", "\"https://wechat.fmone.cn\""
+
+        buildConfigField "String", "UPDATE_CHANNEL", "\"AzTj2xWHbEpXnfQw\""
+        buildConfigField "String", "UPDATE_APP_KEY", "\"jCZamTWiwGfrKEM3jmzDysb2amjazfJy\""
+
+        buildConfigField "String", "APP_KEY", "\"00000000\""
+        buildConfigField "String", "APP_SECRET", "\"11111111\""
+
+        buildConfigField "boolean", "NEED_UPDATE_RECORD", "true"
+        buildConfigField "String", "CUSTOMER_CODE", "\"zSXDCeATbPymrsDi\""
+
+        buildConfigField "String", "UMENG_CHANNEL_KEY", "\"${UMENG_CHANNEL_KEY}\""
+        buildConfigField "String", "UMENG_CHANNEL_VALUE", "\"${UMENG_CHANNEL_VALUE}\""
+        buildConfigField "String", "QQZONE_KEY", "\"${QQZONE_KEY}\""
+        buildConfigField "String", "QQZONE_SECRET", "\"${QQZONE_SECRET}\""
+        buildConfigField "String", "DING_DING_SECRET", "\"${DING_DING_SECRET}\""
+        buildConfigField "String", "WEI_XIN_KEY", "\"${WEI_XIN_KEY}\""
+        buildConfigField "String", "WEI_XIN_SECRET", "\"${WEI_XIN_SECRET}\""
+
+        buildConfigField "String", "MI_APPID", "\"${MI_APPID}\""
+        buildConfigField "String", "MI_APPKEY", "\"${MI_APPKEY}\""
+
+        buildConfigField "String", "ALIYUN_PUSH_APP_KEY", "\"${ALIYUN_PUSH_APP_KEY}\""
+        buildConfigField "String", "ALIYUN_PUSH_APP_SECRET", "\"${ALIYUN_PUSH_APP_SECRET}\""
     }
 
     buildTypes {
@@ -39,5 +71,5 @@ dependencies {
     })
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
-    api project(':arch')
+    api project(':demandcomponent')
 }

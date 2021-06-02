@@ -2,10 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/blue_10aeff"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue_10aeff"
     tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_start_demand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:text="启动服务台" />
 
 
 </LinearLayout>
