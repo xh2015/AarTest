@@ -16,3 +16,4 @@ local.properties
 /app/build/
 /basiclib/build/
 /basicres/build/
+/arch/build/

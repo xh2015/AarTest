@@ -1,2 +1,2 @@
-include ':app',':basiclib',':basicres'
+include ':app',':basiclib',':basicres',':arch'
 rootProject.name = "AarTest"

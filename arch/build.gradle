@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.0'
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName '1.0.0'
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "SERVER_UPDATE_URL", "\"http://fmone.cn:3000\""
+        buildConfigField "String", "TEST_APP_SERVER", "\"https://wechat.fmone.cn\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+//    api project(':basiclib')
+//    api project(':basicres')
+    api 'com.github.xh2015.AarTest:basicres:1.0.1'
+    api 'com.github.xh2015.AarTest:basiclib:1.0.1'
+}
+
+uploadArchives {
+    configuration = configurations.archives
+    repositories {
+        mavenDeployer {
+            repository(url: 'http://192.168.1.146:8080/nexus/content/repositories/com.facility.wireless/') {
+                authentication(userName: 'admin', password: 'admin123')
+            }
+            pom.project {
+                version '1.0.6'
+                artifactId 'arch'
+                groupId 'com.facility.wireless'
+                packaging 'aar'
+                description 'init version 1.0.6'
+            }
+        }
+    }
+}
