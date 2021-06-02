@@ -1,4 +1,5 @@
-apply plugin: 'com.dd.comgradle'
+//apply plugin: 'com.dd.comgradle'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 26
@@ -39,10 +40,10 @@ dependencies {
     api 'com.github.xh2015.AarTest:arch:1.0.2'
 }
 
-combuild {
-    applicationName = 'com.facilityone.wireless.demand.runalone.DemandApplication'
-    isRegisterCompoAuto = false
-}
+//combuild {
+//    applicationName = 'com.facilityone.wireless.demand.runalone.DemandApplication'
+//    isRegisterCompoAuto = false
+//}
 
 repositories {
     mavenCentral()
