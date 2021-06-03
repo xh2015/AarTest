@@ -72,7 +72,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'android.arch.navigation:navigation-fragment:1.0.0'
     implementation 'android.arch.navigation:navigation-ui:1.0.0'
-//    implementation project(':arch')
+    implementation project(':arch')
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -81,5 +81,5 @@ dependencies {
 //    api project(':demandcomponent')
     //依赖aar和远程基础库
     implementation(name: 'demandcomponent', ext: 'aar')
-    api 'com.github.xh2015.AarTest:arch:1.0.2'
+//    api 'com.github.xh2015.AarTest:arch:1.0.2'
 }

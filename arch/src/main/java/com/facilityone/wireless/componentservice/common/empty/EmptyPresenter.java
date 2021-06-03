@@ -32,7 +32,7 @@ public class EmptyPresenter extends CommonBasePresenter<EmptyFragment> {
 
     @Override
     public void onLogonSuccess() {
-        Long pId = 185L;
+        Long pId = 9L;
         FM.getConfigurator().withProjectId(pId);
 
         SPUtils.getInstance(SPKey.SP_MODEL).put(SPKey.PROJECT_ID, pId);

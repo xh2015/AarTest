@@ -20,7 +20,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         saveChannelParam();
-        Facility.init(this, "https://wechat.fmone.cn", BuildConfig.DEBUG);
+        Facility.init(this, "http://192.168.1.66:8080", BuildConfig.DEBUG);
         DBManager.getInstance();
     }
 
