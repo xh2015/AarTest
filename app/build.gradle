@@ -54,6 +54,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -71,5 +78,8 @@ dependencies {
     })
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
-    api project(':demandcomponent')
+//    api project(':demandcomponent')
+    //依赖aar和远程基础库
+    implementation(name: 'demandcomponent', ext: 'aar')
+    api 'com.github.xh2015.AarTest:arch:1.0.2'
 }
